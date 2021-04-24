@@ -5,13 +5,14 @@ from django.contrib import admin
 from django.urls import include, path # added include for debugger
 import debug_toolbar 
 
-from .views import index, blog, about
+from .views import index, blog, about, post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('blog/', blog),
     path('about/', about),
+    path('post/', post),
 ]
 
 if settings.DEBUG:
